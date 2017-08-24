@@ -2,8 +2,8 @@ start <- Sys.time()
 
 file.path <- "~\\projects\\transcriptomics\\data\\"
 file.name <- "expressionMatrix_TPM.csv"
-# file.name <- "OLD_expressionMatrix.csv"
 ribo.name <- "riboGenes.csv"
+
 
 q = 0.970 # 95% confidence
 require('car')
@@ -82,11 +82,11 @@ for (i in 1:4) {
 par(mfrow = c(2, 4))
 
 for (i in 1:4) {
-  Graph(total.data[[i]], 'Total')
+  Graph(total.data[[i]], '')
 }
 
 for (i in 1:4) {
- Graph(ribo.data[[i]], 'Ribosomal')
+ Graph(ribo.data[[i]], '')
 }
 
 end <- Sys.time()
